@@ -3,10 +3,11 @@ var Note = mongoose.model("Note");
 
 module.exports = {
 	index: function(req,res){
-		Note.find({},function(err,notes){
+		Note.find({}).sort('-createdAt').exec(function(err,notes){
 			if(err){
 				console.log(err);
 			}
+			console.log
 			res.json(notes);
 		})
 	},
