@@ -1,0 +1,9 @@
+<p>
+  main works!
+</p>
+<form (submit)="OnSubmit()">
+	<h2>Note: <input type="text" name="note" [(ngModel)]="note"></h2>
+	<button type="submit">Add Note</button>
+</form>
+
+<app-note-list [notes]="notes"></app-note-list>
